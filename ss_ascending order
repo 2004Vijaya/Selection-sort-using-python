@@ -1,0 +1,26 @@
+#program of selection sort of asxending order
+def selection_sort(arr):
+    n=len(arr)
+    for i in range(n):
+        min=i
+        for j in range(i+1,n):
+            if arr[j]<arr[min]:
+                min=j
+        arr[i],arr[min]=arr[min],arr[i]
+    return arr
+    
+size=int(input("Enter No of elements:"))
+arr=[]
+print("Enter",size,"elements")
+for _ in range(size):
+    num=int(input("Enter the element"))
+    arr.append(num)
+result=selection_sort(arr)
+print("Sorted Array:",result)
+
+output:
+Enter No of elements: 2
+Enter 2 elements
+Enter the element 9
+Enter the element 6
+Sorted Array: [6, 9]
